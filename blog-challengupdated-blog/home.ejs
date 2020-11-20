@@ -1,0 +1,37 @@
+<%- include('partials/header.ejs') -%>
+
+
+
+    <h1>Home</h1>
+
+
+
+    <p>
+        <%=content%>
+
+
+
+    </p>
+    <%console.log(u) %>
+
+        <% u.forEach(function(items){%>
+
+            <h1>
+                <%= items.title %>
+            </h1>
+            <p>
+                <%=items.postbod.substring(0,100) +" ..."%>
+                    <a href="/post/:<%=u.title%>">Read More</a>
+            </p>
+            <% });%>
+
+
+                <!-- <% for(i=0;i<u.length; i++){%>
+
+            <%console.log(u[i].title)%>
+
+                <% };%> -->
+
+
+
+                <%- include('partials/footer.ejs')%>
